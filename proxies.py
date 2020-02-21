@@ -47,12 +47,14 @@ def check_proxies(proxies):
 
     working_proxies = set()
 
+    # Iterate through a list of proxy ip address
     for proxy in proxies:
 
         print(f'Trying to connect with proxy: {proxy}')
 
         try:
 
+            # Try to get a HTTP response from the proxy
             response = requests.get(_URL_TEST, proxies={"http": proxy, "https": proxy}, timeout=5)
 
             print(f'Proxy {proxy} added: {response.json()}')
