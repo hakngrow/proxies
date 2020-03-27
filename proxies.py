@@ -25,7 +25,7 @@ def get_proxies(only_https=True):
     proxies = set()
 
     # Each proxy row has 8 columns i.e. <td> elements
-    ip_index = [8 * k for k in range(80)]
+    ip_index = [8 * k for k in range(20)]
 
     # Iterate through each row set of <td> elements and extract proxy details
     for i in ip_index:
