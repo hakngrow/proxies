@@ -17,10 +17,10 @@ def get_proxies(only_https=True):
     page_soup = soup(page_html, "html.parser")
 
     # Extract <table> element that contains the list of proxies
-    container = page_soup.find_all("table", {"id": "proxylisttable"})[0]
+    table = page_soup.find_all("table", {"id": "proxylisttable"})[0]
 
     # Extract all <td> elements from the table within the container
-    td_elements = container.find_all("td")
+    td_elements = table.find_all("td")
 
     proxies = set()
 
