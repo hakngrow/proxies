@@ -17,7 +17,7 @@ def get_proxies(only_https=True):
     page_soup = soup(page_html, "html.parser")
 
     # Extract container <div> element that contains the table with the list of proxies
-    container = page_soup.find_all("div", {"class": "table-responsive"})[0]
+    container = page_soup.find_all("div", {"id": "proxylisttable_wrapper"})[0]
 
     # Extract all <td> elements from the table within the container
     td_elements = container.find_all("td")
